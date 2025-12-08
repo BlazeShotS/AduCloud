@@ -1,3 +1,3 @@
 <x-layout>
-    <p>Hola</p>
+    <p style="color: white;">Hola</p>
 </x-layout>
