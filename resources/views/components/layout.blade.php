@@ -5,29 +5,33 @@
     <script></script>
 
     <header class="main-header">
-        <div class="logo">
-            <a href="#" class="logo-link">
-                <div class="logo-icon-container">
-                    <img src="{{ asset('img/LogoAduCloud.png') }}" alt="AduCloud Logo">
+        <div class="header-content">
+            <div class="logo">
+                <a href="{{ route('inicio') }}" class="logo-link">
+                    <div class="logo-icon-container">
+                        <img src="{{ asset('img/LogoAduCloud.png') }}" alt="AduCloud Logo">
+                    </div>
+                    <span class="logo-text-adu">Adu</span><span class="logo-text-cloud">Cloud</span>
+                </a>
+            </div>
+
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="{{ route('inicio') }}" class="nav-link">INICIO </a></li>
+                    <li class="nav-item"><a href="{{ route('acerca') }}" class="nav-link">ACERCA DE </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">SERVICIOS </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">DEMO </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">CONTACTANOS </a></li>
+                </ul>
+            </nav>
+
+            <!--Barra lateral lateral-->
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
-                <span class="logo-text-adu">Adu</span><span class="logo-text-cloud">Cloud</span>
-            </a>
-        </div>
-
-        <nav class="main-nav" id="main-nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="{{ route('inicio') }}" class="nav-link">INICIO </a></li>
-                <li class="nav-item"><a href="{{ route('acerca') }}" class="nav-link">ACERCA DE </a></li>
-                <li class="nav-item"><a href="#" class="nav-link">SERVICIOS </a></li>
-                <li class="nav-item"><a href="#" class="nav-link">CONTACTANOS </a></li>
-            </ul>
-        </nav>
-
-        <div class="menu-toggle" id="menu-toggle">
-            <div class="menu-icon">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
             </div>
         </div>
     </header>

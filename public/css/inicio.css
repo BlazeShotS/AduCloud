@@ -8,6 +8,20 @@
     --logo-glow-color: #22D3EE;
 }
 
+/* 🌀 AGREGADO: Definición de la Animación de Brillo (Glow) */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 0px rgba(34, 211, 238, 0);
+    }
+    50% {
+        /* Brillo máximo */
+        box-shadow: 0 0 20px var(--logo-glow-color), 0 0 30px rgba(34, 211, 238, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 0px rgba(34, 211, 238, 0);
+    }
+}
+
 /* Estilos generales (Sin cambios) */
 body {
     margin: 0;
@@ -15,28 +29,35 @@ body {
     background-color: #0c111c;
 }
 
-/* --- Estilos del Header Principal (AJUSTE CLAVE PARA CENTRADO) --- */
+/* --- Estilos del Header Principal (AHORA CON CENTRADO GLOBAL) --- */
 
 .main-header {
     display: flex;
-    /* ⚠️ CAMBIO CLAVE 1: Mantiene el logo y el menú toggle en los extremos */
-    justify-content: space-between;
+    /* ⚠️ CAMBIO CLAVE 1: Centra el contenido horizontalmente */
+    justify-content: center;
     align-items: center;
-    padding: 20px 30px; /* Un poco más de padding vertical */
+    padding: 20px 30px;
     background-color: var(--background-dark);
     position: relative;
     min-height: 50px;
     z-index: 20;
 }
 
+/* ⚠️ NUEVO: Contenedor para agrupar Logo, Nav y Hamburguesa */
+.header-content {
+    display: flex;
+    align-items: center;
+    /* Esto es lo que mantiene todo el grupo en línea */
+}
 
-/* --- Estilos del Logo AduCloud (AUMENTO DE TAMAÑO) --- */
-
+/* --- Estilos del Logo AduCloud --- */
+.logo {
+    margin-right: 170px; /* Espacio entre el logo y la navegación */
+}
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    /* ⚠️ AUMENTO DE TAMAÑO: Logo y texto más grandes */
     font-size: 36px;
     font-weight: 700;
 }
@@ -49,6 +70,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* ⚠️ AGREGADO: Aplicación de la animación de brillo */
+    animation: pulse-glow 2s ease-in-out infinite;
 }
 
 .logo-icon-container img {
@@ -69,13 +92,11 @@ body {
 }
 
 
-/* --- Estilos de la Navegación Principal (CENTRADOR) --- */
+/* --- Estilos de la Navegación Principal (ELIMINAR CENTRADO) --- */
 
 .main-nav {
-    /* ⚠️ CAMBIO CLAVE 2: Para centrar perfectamente la navegación en el medio,
-       le damos un 'margin: auto' a los lados. Esto la empuja al centro
-       dentro del espacio disponible entre el logo y el botón. */
-    margin: 0 auto;
+    /* ⚠️ CAMBIO CLAVE 2: Elimina el margin: auto para que el bloque se centre con el resto */
+    margin: 0;
 }
 
 .nav-list {
@@ -105,9 +126,9 @@ body {
 }
 
 
-/* --- Estilos del Ícono de Menú (Visible para Contacto) --- */
-
+/* --- Estilos del Ícono de Menú (Hamburguesa) --- */
 .menu-toggle {
+    margin-left: 220px; /* Espacio entre la navegación y el botón de hamburguesa */
     /*Ahora el botón de hamburguesa está visible en escritorio */
     display: flex;
     cursor: pointer;
@@ -151,6 +172,23 @@ body {
 
     .main-header {
         padding: 15px 20px;
+        /* IMPORTANTE: En móvil, volvemos a distribuir a los lados
+           para que el logo y el toggle no se aplasten */
+        justify-content: space-between;
+    }
+
+    /* En móvil, el contenido del header ya no se agrupa centralmente */
+    .header-content {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .menu-toggle {
+        margin-left: 0;
     }
 
     .menu-toggle {
@@ -158,6 +196,8 @@ body {
     }
 
     /* ⚠️ En móvil, la navegación se oculta y usa display: block/flex para el menú */
+    /* NOTA: Si este menú es para el sidebar de contacto,
+       esta regla de navegación móvil puede no ser necesaria. */
     .main-nav {
         display: none;
         margin: 0; /* Quitar el margin auto en móvil */
@@ -202,7 +242,7 @@ body {
 
 
 /* ======================================================= */
-/* AGREGADO: ESTILOS DE LA BARRA LATERAL DE CONTACTO */
+/* 🚀 ESTILOS DE LA BARRA LATERAL DE CONTACTO (Sin cambios) */
 /* ======================================================= */
 
 .contact-sidebar {
@@ -311,7 +351,7 @@ body {
 }
 
 .subscribe-form .send-btn {
-    background-color: #ff5e14; /* Color naranja fuerte */
+    background-color: var(--cloud-color-start); /* Color turquesa */
     color: var(--text-color-white);
     border: none;
     padding: 10px 20px;
@@ -320,7 +360,7 @@ body {
 }
 
 .subscribe-form .send-btn:hover {
-    background-color: #e6520d;
+    background-color: #36CAE4;
 }
 
 /* Enlaces sociales */
