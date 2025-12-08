@@ -1,0 +1,9 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+
+
+Route::get('/', [PagesController::class, 'Inicio'] ); //Nombre del metodo del controlador, Inicio
+
+
