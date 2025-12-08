@@ -5,6 +5,7 @@
     --background-dark: #121620;
     --cloud-color-start: #22D3EE;
     --cloud-color-end: #22D3EE;
+    --logo-glow-color: #22D3EE;
 }
 
 /* Estilos generales (Sin cambios) */
@@ -200,3 +201,144 @@ body {
 }
 
 
+/* ======================================================= */
+/* AGREGADO: ESTILOS DE LA BARRA LATERAL DE CONTACTO */
+/* ======================================================= */
+
+.contact-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Inicialmente a la derecha */
+    width: 350px;
+    height: 100%;
+    background-color: var(--background-dark);
+    color: var(--text-color-white);
+    z-index: 100;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+
+    /* Estado inicial: OCULTO FUERA DE PANTALLA */
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Clase para MOSTRAR la barra lateral (activada por JavaScript) */
+.contact-sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar-content {
+    padding: 30px;
+}
+
+/* Botón de Cerrar (la 'X') */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: var(--text-color-white);
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--hover-color);
+}
+
+/* Títulos y texto */
+.sidebar-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--hover-color);
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.sidebar-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.contact-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--text-color-white);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.contact-list .icon-map,
+.contact-list .icon-phone,
+.contact-list .icon-mail {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--hover-color);
+}
+
+/* Formulario de Suscripción */
+.subscribe-form {
+    display: flex;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.subscribe-form input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color-white);
+    padding: 10px 15px;
+    outline: none;
+}
+
+.subscribe-form .send-btn {
+    background-color: #ff5e14; /* Color naranja fuerte */
+    color: var(--text-color-white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form .send-btn:hover {
+    background-color: #e6520d;
+}
+
+/* Enlaces sociales */
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color-white);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--hover-color);
+}
