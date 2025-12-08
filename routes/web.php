@@ -5,5 +5,5 @@ use App\Http\Controllers\PagesController;
 
 
 Route::get('/', [PagesController::class, 'Inicio'] ); //Nombre del metodo del controlador, Inicio
-
+Route::get('/acerca-de', [PagesController::class, 'Acercade'] );
 

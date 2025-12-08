@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-     public function Inicio()
+    public function Inicio()
     {
         return view('inicio');
     }
+
+    public function Acercade()
+    {
+        return view('acercaDe');
+    }
+
+
 }
