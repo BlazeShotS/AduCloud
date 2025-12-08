@@ -107,7 +107,7 @@ body {
 /* --- Estilos del Ícono de Menú (Visible para Contacto) --- */
 
 .menu-toggle {
-    /* ⚠️ Ahora el botón de hamburguesa está visible en escritorio */
+    /*Ahora el botón de hamburguesa está visible en escritorio */
     display: flex;
     cursor: pointer;
     border: 1px solid var(--text-color-white);
@@ -198,3 +198,5 @@ body {
         width: 100%;
     }
 }
+
+

@@ -1,13 +1,13 @@
 <div>
     <!-- Favicon Icon -->
     <link rel="icon" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="{{ ('css/inicio.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/inicio.css') }}"> <!--ese asset sirve para cargar archivos estaticos que estan dentro del public-->
 
     <header class="main-header">
         <div class="logo">
             <a href="#" class="logo-link">
                 <div class="logo-icon-container">
-                    <img src="img/LogoAduCloud.png" alt="AduCloud Logo">
+                <img src="{{ asset('img/LogoAduCloud.png') }}" alt="AduCloud Logo">
                 </div>
                 <span class="logo-text-adu">Adu</span><span class="logo-text-cloud">Cloud</span>
             </a>
@@ -15,8 +15,8 @@
 
         <nav class="main-nav" id="main-nav">
             <ul class="nav-list">
-                <li class="nav-item"><a href="{{url ('/')}}" class="nav-link">INICIO </a></li>
-                <li class="nav-item"><a href="{{url ('/acerca-de')}}" class="nav-link">ACERCA DE </a></li>
+                <li class="nav-item"><a href="{{ route('inicio') }}" class="nav-link">INICIO </a></li>
+                <li class="nav-item"><a href="{{ route('acerca') }}" class="nav-link">ACERCA DE </a></li>
                 <li class="nav-item"><a href="#" class="nav-link">SERVICIOS </a></li>
                 <li class="nav-item"><a href="#" class="nav-link">PORTFOLIO </a></li>
                 <li class="nav-item"><a href="#" class="nav-link">CONTACTANOS </a></li>
