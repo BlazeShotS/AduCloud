@@ -1,9 +1,18 @@
-<div>
-    <!-- Favicon Icon -->
-    <link rel="icon" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="{{ asset('css/inicio.css') }}"> <!--ese asset sirve para cargar archivos estaticos que estan dentro del public-->
-    <script></script>
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('img/LogoAduCloud.png') }}">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{{ asset('css/inicio.css') }}">
+</head>
+
+<body>
+
+    <!-- HEADER -->
     <header class="main-header">
         <div class="header-content">
             <div class="logo">
@@ -17,15 +26,15 @@
 
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="{{ route('inicio') }}" class="nav-link">INICIO </a></li>
-                    <li class="nav-item"><a href="{{ route('acerca') }}" class="nav-link">ACERCA DE </a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">SERVICIOS </a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">DEMO </a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">CONTACTANOS </a></li>
+                    <li class="nav-item"><a href="{{ route('inicio') }}" class="nav-link">INICIO</a></li>
+                    <li class="nav-item"><a href="{{ route('acerca') }}" class="nav-link">ACERCA DE</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">SERVICIOS</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">DEMO</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">CONTACTANOS</a></li>
                 </ul>
             </nav>
 
-            <!--Barra lateral lateral-->
+            <!-- Botón menú hamburguesa -->
             <div class="menu-toggle" id="menu-toggle">
                 <div class="menu-icon">
                     <span class="bar"></span>
@@ -36,7 +45,7 @@
         </div>
     </header>
 
-    <!--PARA LA BARRA LATERAL--->
+    <!-- BARRA LATERAL -->
     <div class="contact-sidebar" id="contact-sidebar">
         <div class="sidebar-content">
             <button class="close-btn" id="close-sidebar-btn">&times;</button>
@@ -64,16 +73,18 @@
         </div>
     </div>
 
-    <body>
-        <div class="container">
-            {{ $slot }}
-        </div>
-    </body>
+    <!-- CONTENIDO DE CADA PÁGINA -->
+    <div class="container">
+        {{ $slot }}
+    </div>
 
     <script src="{{ asset('js/barraLateral.js') }}"></script>
 
+    <!-- FOOTER -->
     <footer>
 
     </footer>
 
-</div>
+</body>
+
+</html>
