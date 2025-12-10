@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700;800&display=swap");
 
+
 /* ----- Sección principal ----- */
 .hero-section {
     position: relative;
     width: 100%;
-    height: 100vh;                        /* ✔ Ahora ocupa TODA la pantalla */
+    height: 105vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,23 +13,22 @@
     padding: 0 20px;
     overflow: hidden;
 
-    background-image: url('/img/Fondo8.jpg'); /* ✔ Ruta puesta AQUÍ */
-    background-size: cover;               /* ✔ Cubre toda la pantalla */
-    background-position: center;          /* ✔ Enfocada al centro */
+    background-image: url('/img/hero_bg.jpeg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(90%);
 }
 
-/* ----- Capa oscura para mejorar contraste ----- */
+/* Capa oscura */
 .hero-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);      /* ✔ Oscurece suave y elegante */
+    background: rgba(0, 0, 0, 0.35);
     z-index: 1;
 }
 
-/* ----- Contenido ----- */
+/* CONTENIDO */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -39,27 +39,28 @@
 
 .hero-content h1 {
     font-size: 4rem;
-    font-weight: 800;                     /* ✔ Más elegante y limpio */
+    font-weight: 800;
     margin-bottom: 12px;
     line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 1.3rem;
-    font-family: "Open Sans", sans-serif; /* ✔ Más profesional para párrafos */
+    font-size: 18px;
+    line-height: 1.9em;
+    font-family: "Open Sans", sans-serif;
     margin-bottom: 32px;
     color: #f5f5f5;
 }
 
-/* ----- Botón ----- */
+/* BOTÓN */
 .hero-btn {
     padding: 15px 38px;
     background: #22D3EE;
     color: #000;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 1.15rem;
+    font-size: 18px;
     transition: 0.3s ease;
 }
 
@@ -68,7 +69,7 @@
     transform: translateY(-4px);
 }
 
-/* ----- RESPONSIVO ----- */
+/* ----- RESPONSIVE ----- */
 @media (max-width: 992px) {
     .hero-content h1 {
         font-size: 3rem;
@@ -79,8 +80,11 @@
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    .hero-section {
-        height: 85vh;
+
+    /* CENTRAR EN MÓVIL */
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
@@ -88,8 +92,15 @@
     .hero-content h1 {
         font-size: 2rem;
     }
+
     .hero-btn {
         padding: 12px 28px;
         font-size: 1rem;
     }
+
+    /* Más centrado aún en pantallas pequeñas */
+    .hero-content {
+        max-width: 90%;
+    }
 }
+
