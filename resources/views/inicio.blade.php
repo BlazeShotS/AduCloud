@@ -1,7 +1,5 @@
 <x-layout>
     <section class="hero-section">
-        <img src="/img/hero_bg.jpeg" alt="Fondo Tecnológico" class="hero-img">
-
         <div class="hero-content">
             <h1>Desarrollo de Aplicaciones<br>A Tus Manos</h1>
             <p>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
+
 /* Variables CSS (Sin cambios) */
 :root {
     --hover-color: #25cfe9; /* Color de hover turquesa */
@@ -156,12 +158,13 @@ body {
 .nav-link {
     color: var(--text-color-white);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     padding: 10px 0;
     display: block;
     text-transform: uppercase;
     transition: color 0.3s ease;
+    font-family: "Poppins", sans-serif;
 }
 
 .nav-link:hover {
