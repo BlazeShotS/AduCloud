@@ -1,0 +1,427 @@
+/* Variables CSS (Sin cambios) */
+:root {
+    --hover-color: #25cfe9; /* Color de hover turquesa */
+    --text-color-white: #ffffff;
+    --background-dark: #020202;
+    --cloud-color-start: #22D3EE;
+}
+
+/* 🌀 AGREGADO: Definición de la Animación de Brillo (Glow) */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 0px rgba(34, 211, 238, 0);
+    }
+    50% {
+        /* Brillo máximo */
+        box-shadow: 0 0 20px var(--logo-glow-color), 0 0 30px rgba(34, 211, 238, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 0px rgba(34, 211, 238, 0);
+    }
+}
+
+/* Estilos generales (Sin cambios) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #020202;
+}
+
+/* --- Estilos del Header Principal (AHORA CON CENTRADO GLOBAL) --- */
+
+.main-header {
+    display: flex;
+    /*CAMBIO CLAVE 1: Centra el contenido horizontalmente */
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--background-dark);
+    position: relative;
+    min-height: 50px;
+    z-index: 20;
+}
+
+/* ⚠️ NUEVO: Contenedor para agrupar Logo, Nav y Hamburguesa */
+.header-content {
+    display: flex;
+    align-items: center;
+    /* Esto es lo que mantiene todo el grupo en línea */
+}
+
+.logo {
+    margin-right: 170px; /* Espacio entre el logo y la navegación */
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* AUMENTO DE TAMAÑO: Contenedor de la imagen más grande */
+.logo-icon-container {
+    width: 60px;
+    height: 65px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* AGREGADO: Aplicación de la animación de brillo */
+    /*animation: pulse-glow 2s ease-in-out infinite;*/
+    border-radius: 10%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-icon-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-icon-container:hover {
+    transform: scale(1.10); /* más grande */
+    box-shadow: 0 0 18px #22D3EE;
+}
+
+.logo-icon-container:hover img {
+    transform: scale(1.10); /* la imagen también crece un poco */
+}
+
+/* Opcional: efecto luz pulsante */
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 6px #22D3EE; }
+    50% { box-shadow: 0 0 18px #22D3EE; }
+    100% { box-shadow: 0 0 6px #22D3EE; }
+}
+
+/* Si quieres activar el pulso mientras haces hover */
+.logo-icon-container:hover {
+    animation: glowPulse 1.4s infinite ease-in-out;
+}
+
+
+/* ------- ADU ------- */
+.logo-text-adu {
+    color: var(--text-color-white);
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+.logo-text-adu:hover {
+    color: var(--text-color-white);
+    text-shadow: 0 0 8px #22D3EE, 0 0 16px #22D3EE;
+}
+
+
+/* ------- CLOUD ------- */
+.logo-text-cloud {
+    background: linear-gradient(to right, var(--cloud-color-start), var(--cloud-color-start));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+.logo-text-cloud:hover {
+    background: linear-gradient(to right, #22D3EE, #22D3EE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Efecto glow */
+    text-shadow: 0 0 8px #22D3EE, 0 0 16px #22D3EE;
+}
+
+
+
+/* --- Estilos de la Navegación Principal (ELIMINAR CENTRADO) --- */
+
+.main-nav {
+    /*CAMBIO CLAVE 2: Elimina el margin: auto para que el bloque se centre con el resto */
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 15px; /* Margen horizontal más equilibrado */
+}
+
+.nav-link {
+    color: var(--text-color-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+    display: block;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--hover-color);
+}
+
+
+/* --- Estilos del Ícono de Menú (Hamburguesa) --- */
+.menu-toggle {
+    margin-left: 220px; /* Espacio entre la navegación y el botón de hamburguesa */
+    /*Ahora el botón de hamburguesa está visible en escritorio */
+    display: flex;
+    cursor: pointer;
+    border: 1px solid var(--text-color-white);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    border-color: var(--hover-color);
+}
+
+.menu-icon {
+    width: 20px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--text-color-white);
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover .bar {
+    background-color: var(--hover-color);
+}
+
+/* --- Media Query para Responsividad (Móvil) --- */
+
+@media (max-width: 900px) {
+
+    .main-header {
+        padding: 15px 20px;
+        /* IMPORTANTE: En móvil, volvemos a distribuir a los lados
+           para que el logo y el toggle no se aplasten */
+        justify-content: space-between;
+    }
+
+    /* En móvil, el contenido del header ya no se agrupa centralmente */
+    .header-content {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .menu-toggle {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* ⚠️ En móvil, la navegación se oculta y usa display: block/flex para el menú */
+    /* NOTA: Si este menú es para el sidebar de contacto,
+       esta regla de navegación móvil puede no ser necesaria. */
+    .main-nav {
+        display: none;
+        margin: 0; /* Quitar el margin auto en móvil */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 10;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    /* Ajuste de logo a tamaño más pequeño en móvil */
+    .logo-link {
+        font-size: 24px;
+    }
+
+    .logo-icon-container {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-item {
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+        padding: 15px 20px;
+        width: 100%;
+    }
+}
+
+
+/* ======================================================= */
+/* 🚀 ESTILOS DE LA BARRA LATERAL DE CONTACTO (Sin cambios) */
+/* ======================================================= */
+
+.contact-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Inicialmente a la derecha */
+    width: 350px;
+    height: 100%;
+    background-color: var(--background-dark);
+    color: var(--text-color-white);
+    z-index: 100;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+
+    /* Estado inicial: OCULTO FUERA DE PANTALLA */
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Clase para MOSTRAR la barra lateral (activada por JavaScript) */
+.contact-sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar-content {
+    padding: 30px;
+}
+
+/* Botón de Cerrar (la 'X') */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: var(--text-color-white);
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--hover-color);
+}
+
+/* Títulos y texto */
+.sidebar-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--hover-color);
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.sidebar-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.contact-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--text-color-white);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.contact-list .icon-map,
+.contact-list .icon-phone,
+.contact-list .icon-mail {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--hover-color);
+}
+
+/* Formulario de Suscripción */
+.subscribe-form {
+    display: flex;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.subscribe-form input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color-white);
+    padding: 10px 15px;
+    outline: none;
+}
+
+.subscribe-form .send-btn {
+    background-color: var(--cloud-color-start); /* Color turquesa */
+    color: var(--text-color-white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form .send-btn:hover {
+    background-color: #36CAE4;
+}
+
+/* Enlaces sociales */
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color-white);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--hover-color);
+}

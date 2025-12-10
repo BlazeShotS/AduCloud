@@ -7,6 +7,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('img/LogoAduCloud.png') }}">
     <!-- Estilos -->
+    <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/inicio.css') }}">
 </head>
 
