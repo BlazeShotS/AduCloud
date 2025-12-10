@@ -5,7 +5,7 @@
 .hero-section {
     position: relative;
     width: 100%;
-    height: 105vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(15, 15, 15, 0.384); /*Esto opaca el fondo de la imagen*/
     z-index: 1;
 }
 

@@ -10,6 +10,7 @@
 
 html, body {
     overflow-x: hidden;
+    background-color: #000000;
 }
 
 
@@ -31,7 +32,6 @@ html, body {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #070707;
 }
 
 /* --- Estilos del Header Principal (AHORA CON CENTRADO GLOBAL) --- */
@@ -77,7 +77,6 @@ body {
     /* AGREGADO: Aplicación de la animación de brillo */
     /*animation: pulse-glow 2s ease-in-out infinite;*/
     border-radius: 10%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo-icon-container img {
@@ -89,23 +88,10 @@ body {
 
 .logo-icon-container:hover {
     transform: scale(1.10); /* más grande */
-    box-shadow: 0 0 18px #22D3EE;
 }
 
 .logo-icon-container:hover img {
     transform: scale(1.10); /* la imagen también crece un poco */
-}
-
-/* Opcional: efecto luz pulsante */
-@keyframes glowPulse {
-    0% { box-shadow: 0 0 6px #22D3EE; }
-    50% { box-shadow: 0 0 18px #22D3EE; }
-    100% { box-shadow: 0 0 6px #22D3EE; }
-}
-
-/* Si quieres activar el pulso mientras haces hover */
-.logo-icon-container:hover {
-    animation: glowPulse 1.4s infinite ease-in-out;
 }
 
 
