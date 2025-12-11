@@ -24,7 +24,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(15, 15, 15, 0.384); /*Esto opaca el fondo de la imagen*/
+    background: rgba(17, 17, 17, 0.452); /*Esto opaca el fondo de la imagen*/
     z-index: 1;
 }
 
@@ -104,3 +104,107 @@
     }
 }
 
+
+
+/* ================= ACERCA DE LA EMPRESA ================= */
+
+.informacion-empresa {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    padding: 80px 8%;
+}
+
+.empresa-img {
+    width: 25%;
+    height: 600px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(34,211,238,0.35); /* efecto #22D3EE */
+}
+
+.empresa-texto h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.empresa-texto p {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 560px) {
+    .informacion-empresa {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .empresa-img {
+        width: 95%;
+    }
+}
+
+
+/* ================= SERVICIOS ESPECIALIZADOS ================= */
+
+.especializados {
+    padding: 60px 8%;
+    color: #fff;
+    background-color: #181818;
+}
+
+.titulo-servicios h2 {
+    font-size: 2.8rem;
+}
+
+.cards-servicios {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px #22D3EE;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* puntito tipo captura */
+.badge {
+    width: 12px;
+    height: 12px;
+    background: #22D3EE;
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
