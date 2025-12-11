@@ -110,14 +110,14 @@
 /* CONTENEDOR GENERAL */
 .informacion-empresa {
     width: 100%;
-    max-width: 1200px;              /* ✔ Limita el ancho para que no se pegue a los bordes */
+    max-width: 1000px;              /* ✔ Limita el ancho para que no se pegue a los bordes */
     margin: 0 auto;                 /* ✔ Centra horizontalmente */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 170px;
-    padding: 80px 8%;               /* ✔ Espaciado interno elegante */
+    padding: 80px 2%;               /* ✔ Espaciado interno elegante */
 }
 
 /* IMAGEN */
@@ -163,7 +163,6 @@
 .especializados {
     padding: 60px 8%;
     color: #fff;
-    background-color: #181818;
 }
 
 .titulo-servicios h2 {
