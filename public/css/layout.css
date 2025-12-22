@@ -4,8 +4,15 @@
 :root {
     --hover-color: #25cfe9; /* Color de hover turquesa */
     --text-color-white: #ffffff;
-    --background-dark: #080808;
+    --background-dark: #101111;
     --cloud-color-start: #22D3EE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 html, body {
@@ -14,7 +21,7 @@ html, body {
 }
 
 
-/* 🌀 AGREGADO: Definición de la Animación de Brillo (Glow) */
+/* AGREGADO: Definición de la Animación de Brillo (Glow) */
 @keyframes pulse-glow {
     0% {
         box-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 0px rgba(34, 211, 238, 0);
@@ -48,7 +55,7 @@ body {
     z-index: 20;
 }
 
-/* ⚠️ NUEVO: Contenedor para agrupar Logo, Nav y Hamburguesa */
+/* NUEVO: Contenedor para agrupar Logo, Nav y Hamburguesa */
 .header-content {
     display: flex;
     align-items: center;
@@ -131,7 +138,6 @@ body {
 /* --- Estilos de la Navegación Principal (ELIMINAR CENTRADO) --- */
 
 .main-nav {
-    /*CAMBIO CLAVE 2: Elimina el margin: auto para que el bloque se centre con el resto */
     margin: 0;
 }
 

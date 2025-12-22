@@ -10,14 +10,23 @@
         </div>
     </section>
 
-    <section class="informacion-empresa">
-        <img src="{{ asset('img/portfolio_38.jpeg') }}" alt="Imagen educación tecnológica" class="empresa-img">
-        <div class="empresa-texto">
-            <h1>Acerca de nuestros servicios y soluciones tecnológicas innovadoras de TI</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quia facere praesentium,
-                quos omnis unde at sit nihil reiciendis ipsum sunt quam suscipit.
-            </p>
+    <section class="section about">
+        <div class="about-container">
+
+            <div class="about-text">
+                <h2 class="section-title">Acerca de Nosotros</h2>
+                <p class="section-text">
+                    Somos una empresa especializada en soluciones digitales modernas,
+                    enfocadas en innovación, calidad y resultados. Creamos tecnología que
+                    impulsa el crecimiento de negocios en un entorno digital competitivo.
+                </p>
+            </div>
+
+            <div class="about-image">
+                <img src="https://img.freepik.com/foto-gratis/hombre-tiro-medio-gafas-vr_23-2149126949.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="Tecnología e innovación">
+            </div>
+
         </div>
     </section>
 
