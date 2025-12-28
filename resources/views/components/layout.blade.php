@@ -30,8 +30,8 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="{{ route('inicio') }}" class="nav-link">INICIO</a></li>
                     <li class="nav-item"><a href="{{ route('acerca') }}" class="nav-link">ACERCA DE</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">NUESTRO EQUIPO</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">SERVICIOS</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">DEMO</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">CONTACTANOS</a></li>
                 </ul>
             </nav>

@@ -30,6 +30,28 @@
         </div>
     </section>
 
+
+    <section class="section team">
+        <div class="team-container">
+
+            <div class="team-image">
+                <img src="{{ asset('img/Equipo.webp') }}"
+                    alt="Tecnología e innovación">
+            </div>
+
+            <div class="team-text">
+                <h2 class="section-title">Nuestro Equipo</h2>
+                <p class="section-text">
+                    Nuestro equipo está altamente capacitado en el desarrollo de aplicaciones web modernas,
+                    consultoría tecnológica y diseño de arquitecturas en la nube. Contamos con especialistas
+                    en programación full stack y servicios cloud, enfocados en brindar soluciones eficientes,
+                    escalables y alineadas a los objetivos de cada negocio.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
     <section class="especializados">
         <div class="titulo-servicios">
             <h2>Servicios especializados</h2>
@@ -62,7 +84,43 @@
                 <p class="card-title">Technology</p>
             </div>
 
+            <div class="card">
+                <img src="https://picsum.photos/330/260?random=4">
+                <span class="badge"></span>
+                <p class="card-title">Technology</p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/330/260?random=4">
+                <span class="badge"></span>
+                <p class="card-title">Technology</p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/330/260?random=4">
+                <span class="badge"></span>
+                <p class="card-title">Technology</p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/330/260?random=4">
+                <span class="badge"></span>
+                <p class="card-title">Technology</p>
+            </div>
+
         </div>
+    </section>
+
+    <section class="section contact">
+        <h2 class="section-title">Contáctanos</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="tel" placeholder="Número de contacto" required>
+            <textarea placeholder="Escribe tu mensaje..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
     </section>
 
 </x-layout>
