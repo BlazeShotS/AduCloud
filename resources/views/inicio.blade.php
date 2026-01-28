@@ -1,12 +1,16 @@
 <x-layout>
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Desarrollo de Aplicaciones<br>A Tus Manos</h1>
-            <p>
-                Creamos soluciones tecnológicas modernas para empresas
-                que buscan transformar sus ideas en productos digitales reales.
+    <section class="relative h-screen flex items-center justify-center hero-image">
+        <div class="text-center px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                Impulsamos tu <span class="text-accent">Futuro Digital</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Desarrollo de aplicaciones, despliegue escalable y consultoría estratégica de datos para empresas que no se detienen.
             </p>
-            <a href="#" class="hero-btn">Solicitar Cotización</a>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#servicios" class="btn-primary">Ver Soluciones</a>
+                <a href="#contacto" class="border border-accent text-accent px-6 py-3 rounded-lg font-bold hover:bg-accent/10 transition">Hablar con un experto</a>
+            </div>
         </div>
     </section>
 
@@ -23,8 +27,7 @@
             </div>
 
             <div class="about-image">
-                <img src="https://img.freepik.com/foto-gratis/hombre-tiro-medio-gafas-vr_23-2149126949.jpg?semt=ais_hybrid&w=740&q=80"
-                    alt="Tecnología e innovación">
+                <img src="https://img.freepik.com/foto-gratis/hombre-tiro-medio-gafas-vr_23-2149126949.jpg?semt=ais_hybrid&w=740&q=80" alt="Tecnología e innovación">
             </div>
 
         </div>
@@ -52,62 +55,43 @@
         </div>
     </section>
 
-    <section class="especializados">
-        <div class="titulo-servicios">
-            <h2>Servicios especializados</h2>
-            <p>Especialidad</p>
+    <!-- SERVICIOS -->
+    <section class="section bg-black" id="servicios">
+        <div class="text-center mb-16">
+            <h2 class="section-title inline-block">Servicios Especializados</h2>
+            <p class="text-white mt-4 opacity-80">Soluciones de alto impacto tecnológico.</p>
         </div>
-
-        <div class="cards-servicios">
-
-            <div class="card">
-                <img src="https://picsum.photos/330/260?random=1">
-                <span class="badge"></span>
-                <p class="card-title">UI / UX Design</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="service-card">
+                <i data-lucide="layout" class="mx-auto mb-4 text-accent w-12 h-12"></i>
+                <h3 class="text-xl font-bold mb-3 text-white">Aplicaciones Web</h3>
+                <p class="text-white text-sm opacity-80">Desarrollo robusto con Laravel, React y arquitecturas modernas.</p>
             </div>
-
-            <div class="card">
-                <img src="https://picsum.photos/330/260?random=2">
-                <span class="badge"></span>
-                <p class="card-title">React.js Development</p>
+            <div class="service-card">
+                <i data-lucide="cloud" class="mx-auto mb-4 text-accent w-12 h-12"></i>
+                <h3 class="text-xl font-bold mb-3 text-white">Despliegues Cloud</h3>
+                <p class="text-white text-sm opacity-80">Escalabilidad garantizada en AWS, Azure y Google Cloud.</p>
             </div>
-
-            <div class="card">
-                <img src="https://picsum.photos/330/260?random=3">
-                <span class="badge"></span>
-                <p class="card-title">Digital Marketing</p>
+            <div class="service-card">
+                <i data-lucide="database" class="mx-auto mb-4 text-accent w-12 h-12"></i>
+                <h3 class="text-xl font-bold mb-3 text-white">Bases de Datos SQL</h3>
+                <p class="text-white text-sm opacity-80">Optimización de consultas y gestión eficiente de grandes volúmenes.</p>
             </div>
-
-            <div class="card">
-                <img src="https://picsum.photos/330/260?random=4">
-                <span class="badge"></span>
-                <p class="card-title">Technology</p>
+            <div class="service-card">
+                <i data-lucide="bar-chart-3" class="mx-auto mb-4 text-accent w-12 h-12"></i>
+                <h3 class="text-xl font-bold mb-3 text-white">Análisis de Datos</h3>
+                <p class="text-white text-sm opacity-80">BI y analítica avanzada para decisiones basadas en evidencia.</p>
             </div>
-
-            <div class="card">
-                <img src="https://picsum.photos/330/260?random=4">
-                <span class="badge"></span>
-                <p class="card-title">Technology</p>
+            <div class="service-card">
+                <i data-lucide="shield-check" class="mx-auto mb-4 text-accent w-12 h-12"></i>
+                <h3 class="text-xl font-bold mb-3 text-white">Ciberseguridad</h3>
+                <p class="text-white text-sm opacity-80">Protección de activos críticos y auditorías de seguridad.</p>
             </div>
-
-            <div class="card">
-                <img src="https://picsum.photos/330/260?random=4">
-                <span class="badge"></span>
-                <p class="card-title">Technology</p>
+            <div class="service-card">
+                <i data-lucide="code-2" class="mx-auto mb-4 text-accent w-12 h-12"></i>
+                <h3 class="text-xl font-bold mb-3 text-white">Consultoría TI</h3>
+                <p class="text-white text-sm opacity-80">Estrategia tecnológica personalizada para tu empresa.</p>
             </div>
-
-            <div class="card">
-                <img src="https://picsum.photos/330/260?random=4">
-                <span class="badge"></span>
-                <p class="card-title">Technology</p>
-            </div>
-
-            <div class="card">
-                <img src="https://picsum.photos/330/260?random=4">
-                <span class="badge"></span>
-                <p class="card-title">Technology</p>
-            </div>
-
         </div>
     </section>
 

@@ -9,10 +9,14 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/inicio.css') }}">
+     <!-- Fuentes y Tailwind -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 
-<body>
+<body class="bg-gradient-tech" >
 
     <!-- HEADER -->
     <header class="main-header">
@@ -22,7 +26,8 @@
                     <div class="logo-icon-container">
                         <img src="{{ asset('img/LogoAduCloud.png') }}" alt="AduCloud Logo">
                     </div>
-                    <span class="logo-text-adu">Adu</span><span class="logo-text-cloud">Cloud</span>
+                    <span class="logo-text-adu">Adu</span>
+                    <span class="logo-text-cloud">Cloud</span>
                 </a>
             </div>
 
@@ -47,45 +52,23 @@
         </div>
     </header>
 
-    <!-- BARRA LATERAL -->
-    <div class="contact-sidebar" id="contact-sidebar">
-        <div class="sidebar-content">
-            <button class="close-btn" id="close-sidebar-btn">&times;</button>
 
-            <h2 class="sidebar-title">¿Tienes un proyecto en mente?</h2>
-            <p class="sidebar-subtitle">Mantente conectado con nosotros.</p>
-
-            <h3 class="contact-heading">Contacta con AduCloud</h3>
-            <ul class="contact-list">
-                <li><span class="icon-map">📍</span> 50 Wall Street Suite, 44150 Ohio, United States</li>
-                <li><span class="icon-phone">📞</span> +44 454 7800 112</li>
-                <li><span class="icon-mail">📧</span> info@aducloud.com</li>
-            </ul>
-
-            <div class="subscribe-form">
-                <input type="email" placeholder="ejemplo@gmail.com">
-                <button class="send-btn" type="submit">Enviar</button>
-            </div>
-
-            <div class="social-links">
-                <a href="#" class="social-icon">in</a>
-                <a href="#" class="social-icon">tw</a>
-                <a href="#" class="social-icon">yt</a>
-            </div>
-        </div>
-    </div>
 
     <!-- CONTENIDO DE CADA PÁGINA -->
-    <div class="container">
-        {{ $slot }}
+    <div>
+        {{ $slot }} <!--slot es una palabra clave , que hace que dentro de aca este las paginas-->
     </div>
 
     <script src="{{ asset('js/barraLateral.js') }}"></script>
 
     <!-- FOOTER -->
-    <footer>
-
+    <footer class="main-footer">
+        <p>&copy; 2026 ADUCLOUD Tech Solutions. Todos los derechos reservados.</p>
     </footer>
+
+     <script>
+        lucide.createIcons();
+    </script>
 
 </body>
 
