@@ -56,7 +56,7 @@
     </section>
 
     <!-- SERVICIOS -->
-    <section class="section bg-black" id="servicios">
+    <section class="section bg-servicios" id="servicios">
         <div class="text-center mb-16">
             <h2 class="section-title inline-block">Servicios Especializados</h2>
             <p class="text-white mt-4 opacity-80">Soluciones de alto impacto tecnológico.</p>
@@ -95,16 +95,50 @@
         </div>
     </section>
 
-    <section class="section contact">
-        <h2 class="section-title">Contáctanos</h2>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Nombre completo" required>
-            <input type="email" placeholder="Correo electrónico" required>
-            <input type="tel" placeholder="Número de contacto" required>
-            <textarea placeholder="Escribe tu mensaje..." required></textarea>
-            <button type="submit">Enviar mensaje</button>
-        </form>
+    <section class="section  bg-equipo">
+        <div class="text-center mb-16">
+            <h2 class="section-title inline-block">Nuestro Equipo</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="member-card text-center">
+                <div class="member-img-container">
+                    <img src="https://i.pravatar.cc/300?u=carlos" alt="Carlos">
+                </div>
+                <h4 class="text-lg font-bold text-white">Carlos Mendoza</h4>
+                <p class="text-accent text-sm">Cloud Architect</p>
+            </div>
+            <div class="member-card text-center">
+                <div class="member-img-container">
+                    <img src="/img/abel.png" alt="abel">
+                </div>
+                <h4 class="text-lg font-bold text-white">Abel Durand</h4>
+                <p class="text-accent text-sm">Full Stack Dev</p>
+            </div>
+            <div class="member-card text-center">
+                <div class="member-img-container">
+                    <img src="https://i.pravatar.cc/300?u=luis" alt="Luis">
+                </div>
+                <h4 class="text-lg font-bold text-white">Luis Duarte</h4>
+                <p class="text-accent text-sm">Data Specialist</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section bg-black" id="contacto">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="section-title inline-block">Contacto</h2>
+                <p class="text-white mt-4 opacity-80">¿Listo para transformar tu empresa?</p>
+            </div>
+            <form class="contact-form space-y-4">
+                <input type="text" placeholder="Nombre completo">
+                <input type="email" placeholder="Correo electrónico">
+                <textarea rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                <button type="submit" class="btn-primary w-full border-none cursor-pointer mt-4">Enviar Mensaje</button>
+            </form>
+        </div>
     </section>
 
 </x-layout>

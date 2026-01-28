@@ -29,7 +29,7 @@ body {
     background: radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.05) 0%, rgba(16, 17, 17, 1) 100%);
 }
 
-.text-accent { color: var(--color-acento); }
+.text-accent { color: var(--color-acento); } /*Para usarlo en tailwind*/
 
 /* =========================================
    HEADER
@@ -43,6 +43,7 @@ body {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 
 .header-content {
     max-width: 1200px;
