@@ -1,6 +1,21 @@
 <x-layout>
     <section class="relative h-screen flex items-center justify-center hero-image">
-        <div class="text-center px-4 max-w-4xl">
+
+        <!-- VIDEO DE FONDO -->
+        <video
+            class="absolute inset-0 w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline>
+            <source src="/img/video.mp4" type="video/mp4">
+        </video>
+
+        <!-- OVERLAY OSCURO -->
+        <div class="absolute inset-0 bg-black/75"></div>
+
+        <!-- CONTENIDO -->
+        <div class="relative z-10 text-center px-4 max-w-4xl">
             <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
                 Impulsamos tu <span class="text-accent">Futuro Digital</span>
             </h1>
@@ -9,10 +24,14 @@
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="#servicios" class="btn-primary">Ver Soluciones</a>
-                <a href="#contacto" class="border border-accent text-accent px-6 py-3 rounded-lg font-bold hover:bg-accent/10 transition">Hablar con un experto</a>
+                <a href="#contacto"
+                    class="border border-accent text-accent px-6 py-3 rounded-lg font-bold hover:bg-accent/10 transition">
+                    Hablar con un experto
+                </a>
             </div>
         </div>
     </section>
+
 
     <section class="section about">
         <div class="about-container">

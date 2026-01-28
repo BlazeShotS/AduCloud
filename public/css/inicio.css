@@ -1,7 +1,7 @@
 /* =================PORTADA================= */
 
 .hero-image {
-    background: linear-gradient(rgba(16, 17, 17, 0.75), rgba(16, 17, 17, 0.75)), url('/img/Portada.jpg');
+    /*background: linear-gradient(rgba(16, 17, 17, 0.75), rgba(16, 17, 17, 0.75)), url('/img/Portada.jpg');*/
     /* Asegúrate que la ruta sea correcta */
     background-size: cover;
     background-position: center;
